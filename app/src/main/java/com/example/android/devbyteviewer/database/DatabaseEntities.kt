@@ -32,7 +32,7 @@ data class DatabaseVideo constructor(
     val thumbnail: String
 )
 
-fun List<Video>.asDomainModel(): List<Video> {
+fun List<DatabaseVideo>.asDomainModel(): List<Video> {
     return map {
         Video(
             url = it.url,
